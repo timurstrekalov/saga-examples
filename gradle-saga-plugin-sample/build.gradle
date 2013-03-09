@@ -1,0 +1,28 @@
+buildscript {
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath group: 'com.github.timurstrekalov', name: 'gradle-saga-plugin', version: '1.4.0'
+    }
+
+}
+
+apply plugin: 'saga'
+    
+saga {
+    baseDir = 'tests'
+    outputDir = new File('build/coverage')
+    includes = '**/*Test*.html'
+    
+    noInstrumentPatterns = [
+        '.+/Empty\\.js'
+    ]
+
+    sourcesToPreload = 'pkg/*.js'
+    outputStrategy = 'BOTH'
+}   
+
