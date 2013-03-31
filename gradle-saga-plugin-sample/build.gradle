@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath group: 'com.github.timurstrekalov', name: 'gradle-saga-plugin', version: '1.4.0'
+        classpath group: 'com.github.timurstrekalov', name: 'gradle-saga-plugin', version: '1.4.1'
     }
 
 }
